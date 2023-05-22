@@ -1,0 +1,165 @@
+:root {
+  --dark-900: #0b090a;
+  --dark-100: #161a1d;
+  --red-900: #660708;
+  --red-700: #a4161a;
+  --red-400: #ba181b;
+  --red-100: #e5383b;
+  --light-900: #d3d3d3;
+  --light-500: #f5f3f4;
+  --light-100: #ffffff;
+  --shadow-500: rgba(1, 1, 1, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--light-100);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+/* Grid */
+
+main {
+  margin-top: 2rem;
+
+  display: grid;
+  justify-content: center;
+
+  gap: 50px;
+
+  grid-template-columns: 200px 300px 400px;
+}
+
+/* Sections */
+section {
+  display: flex;
+  justify-content: center;
+}
+
+/* Seções dentro do aside */
+aside section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Ultima seção dentro do aside */
+aside section + section {
+  margin-top: 2rem;
+}
+
+/* Input */
+
+input,
+button,
+select {
+  height: 50px;
+  width: 200px;
+
+  border-radius: 5px;
+
+  transition: 200ms;
+
+  box-shadow: 0px 4px 5px var(--shadow-500);
+}
+
+input,
+select {
+  padding: 0 1rem;
+
+  border: 2px solid var(--dark-900);
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--red-100);
+}
+
+option {
+  background-color: var(--light-100);
+}
+
+option:checked {
+  color: var(--light-100);
+  background-color: var(--red-100);
+}
+
+/* Button */
+
+button {
+  background-color: var(--red-100);
+  border: var(--red-100);
+
+  color: white;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.9);
+  box-shadow: 0px 0px 5px var(--shadow-500);
+}
+
+/* Lista de cidade */
+
+ul {
+  width: 100%;
+  padding: 2rem;
+  list-style: none;
+
+  user-select: none;
+
+  background: var(--red-100);
+
+  box-shadow: 0px 4px 5px var(--shadow-500);
+}
+
+li {
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--dark-100);
+
+  color: var(--light-100);
+
+  box-shadow: 0px 4px 5px var(--shadow-500);
+}
+
+li p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+li + li {
+  padding: 0 1rem;
+
+  margin-top: 0.5rem;
+}
+
+li:first-child {
+  background-color: var(--light-100);
+  color: var(--dark-100);
+}
+
+/* Dispositivos moveis */
+/* @media (max-width: 1000px) {
+  main {
+    grid-template-areas:
+      "city relation"
+      "list list";
+  }
+} */

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Tags padrões -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Carregando fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;900&display=swap" rel="stylesheet" />
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+
+  <!-- Titulo -->
+  <title>Grafos</title>
+
+  <!-- Ícone -->
+  <link rel="icon" type="image/x-icon" href="icon.png" />
+</head>
+
+<body>
+  <main>
+    <aside>
+      <section>
+        <input id="city-input" type="text" placeholder="Cidade" />
+
+        <button id="add-city-button">Adicionar Cidade</button>
+      </section>
+
+      <section>
+        <select id="first-city-select"></select>
+        <input id="distance-input" type="text" placeholder="Distancia" />
+        <select id="second-city-select"></select>
+
+        <button id="add-relation-button">Adicionar</button>
+      </section>
+    </aside>
+
+    <section>
+      <ul id="city-list">
+        <li>Cidades Adicionadas</li>
+      </ul>
+    </section>
+
+    <section>
+      <ul id="relation-list">
+        <li>Estradas Adicionadas</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Javascript -->
+  <script src="main copy.js"></script>
+</body>
+
+</html>
